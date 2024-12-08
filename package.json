@@ -1,0 +1,19 @@
+{
+  "name": "clear",
+  "version": "1.0.0",
+  "description": "Primeiros passos pra desenvolvimento aplicação web ocm node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abnestinencia/AULA-01.git"
+  },
+  "author": "Abner Paixão",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abnestinencia/AULA-01/issues"
+  },
+  "homepage": "https://github.com/Abnestinencia/AULA-01#readme"
+}
