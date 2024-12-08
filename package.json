@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Abnestinencia/AULA-01#readme",
   "dependencies": {
+    "clear": "file:",
     "express": "^4.21.2"
   }
 }
