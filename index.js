@@ -5,7 +5,7 @@ const port = 3000;
 
 const app = express();
 
-function paginaInicial(requisição, resposta){
+function paginaInicial(req, res){ //t
     resposta.send(`<h1>Seja bem vindo!</h1>
                    <br/>
                    <h2>Primeiros passos para desenvolvimento de aplicação web com NodeJs</h2>
@@ -13,7 +13,7 @@ function paginaInicial(requisição, resposta){
         `);
 }
 
-app.get("/" paginaInicial);
+app.get("/", paginaInicial);
 
 app.listen(port, host, () => {
     console.log("Servidor em execução http://" + host + ":" + port);
