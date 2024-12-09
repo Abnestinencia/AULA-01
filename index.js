@@ -10,6 +10,11 @@ function paginaInicial(req, res){
                    <br/>
                    <h2>Primeiros passos para desenvolvimento de aplicação web com NodeJs</h2>
                    <h3>Pagina Inicial</h3>
+                   <h2>Nossas outras paginas:</h2>
+                   <p>Sobre - http://localhost:3000/sobre</p>
+                   <p>Depositar - http://localhost:3000/depositar</p>
+                   <p>Contar - http://localhost:3000/contar</p>
+                   <p>Tabuada - http://localhost:3000/tab</p>
         `);
 }
 
@@ -87,6 +92,34 @@ function contar(req, res){
 }
 
 app.get("/contar", contar)
+
+function tab(req, res){
+    const num1 = parseInt(req.query.num1);
+    
+
+    if(num1 >= 1 && num1 <= 10){
+        res.write("<p>Contando...</p>")
+        res.write("<ul>")
+        for(let i=1; i < 10; i++){
+            const resul = num1 * i;
+            res.write(`<li>${num1} x ${i} = ${resul} </li>`)
+        }
+        res.write("</ul>")
+        res.end();
+    }
+    else{
+        res.write(`<html>`);
+        res.write(`<head>
+                        <meta charset="UTF-8">
+                        <title>Tabuada errada</title>
+                  </head>`);
+        res.write(`<body>`);
+        res.write("<p>A tabuada é só do 1 até o 10</p>");
+        res.write("<p>Exemplo: http://localhost:3000/tab?num1=1&num2=10</p>")
+        res.write(`</body>`);
+        res.write(`<html>`);
+    }
+}
 
 app.get("/tab", tab);
 
